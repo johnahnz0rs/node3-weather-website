@@ -12,7 +12,7 @@ const publicPath = path.join(__dirname, '../public');
 const viewsPath = path.join(__dirname, '../templates/views');
 const partialsPath = path.join(__dirname, '../templates/partials');
 
-// setup handlebars engine and views location
+// setup handlebars engine, and location of views
 app.set('view engine', 'hbs');
 app.set('views', viewsPath);
 hbs.registerPartials(partialsPath);
@@ -98,4 +98,3 @@ app.get('*', (req, res) => {
 app.listen(port, () => {
     console.log('Server is up on port ' + port);
 });
-
